@@ -14,7 +14,6 @@ const index = `${__dirname}/public/index.html`;
 
 app.get("/", (req, res) => {
 	res.sendFile(index);
-	o;
 });
 
 app.post("/", (req, res) => {
@@ -28,6 +27,6 @@ app.post("/", (req, res) => {
 			return;
 		}
 		res.end("Please choose a color!");
+		return;
 	}
-	return;
 });
