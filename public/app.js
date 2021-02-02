@@ -1,6 +1,9 @@
 var btn = document.getElementById("submit");
 const addItem = document.querySelector("#addItem");
 
+// btn.addEventListener("click", (e) => {
+// 	e.preventDefault();
+// });
 addItem.addEventListener("click", () => {
 	const name = document.querySelector("#itemName");
 	const price = document.querySelector("#itemPrice");

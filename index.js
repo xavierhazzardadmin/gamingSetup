@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/", (req, res) => {
+	console.log("Req made");
 	if (req.body.hasOwnProperty("color")) {
 		const { color } = req.body;
 		if (color) {
