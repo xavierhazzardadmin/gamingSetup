@@ -27,6 +27,6 @@ app.post("/", (req, res) => {
 			return;
 		}
 		res.end("Please choose a color!");
-		return;
 	}
+	return;
 });
