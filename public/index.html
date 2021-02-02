@@ -11,12 +11,16 @@
 			href="./img/favicon.ico"
 			type="image/x-icon"
 		/>
+		<script
+			src="https://kit.fontawesome.com/c7a6f77d43.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
-		<!-- <form method="post" action="/">
+		<form method="post" action="/">
 			<input type="color" name="color" id="colorPicker" />
 			<button id="submit">Save</button>
-		</form> -->
+		</form>
 
 		<div class="form">
 			<form>
@@ -26,6 +30,7 @@
 					placeholder="Please enter item name"
 					class="formInput"
 					id="itemName"
+					required
 				/>
 				<input
 					type="number"
@@ -33,10 +38,25 @@
 					placeholder="Please enter item price"
 					class="formInput"
 					id="itemPrice"
+					required
+				/>
+				<input
+					type="text"
+					name="Price"
+					placeholder="Pic URL (optional)"
+					class="formInput"
+					id="itemImg"
 				/>
 			</form>
 			<button id="addItem">Add</button>
 		</div>
+		<!-- 
+		<div class="item bgColor">
+			<p class="top">Name: <span class="value">Mon</span></p>
+			<p class="middle">Price: <span class="value">24</span></p>
+			<p class="bottom">Savings: <span class="value">476</span></p>
+			<button class="saveBtn"><i class="fas fa-trash-alt"></i></button>
+		</div> -->
 
 		<script src="./app.js"></script>
 	</body>
