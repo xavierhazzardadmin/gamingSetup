@@ -81,13 +81,19 @@ function createItem(name, price, budget, img) {
 	div.appendChild(p3);
 	div.appendChild(save);
 	body.appendChild(div);
+    div.classList.add("show");
 	total += Number(price);
 	totalView.innerHTML = total;
 	save.addEventListener("click", function () {
 		setTimeout(() => {
+            this.parentElement.classList.add("hide");
 			this.parentElement.remove();
 			total -= Number(price);
 			totalView.innerHTML = total;
+            if(total == 0){
+                textShow.classList.remove("show");
+                textShow.classList.add("hide");
+            }
 		});
 	});
 	textShow.classList.add("show");

@@ -108,6 +108,7 @@ body {
 	width: 24rem;
 	height: 7rem;
 	background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
 }
 
 .pic {
@@ -207,15 +208,28 @@ body {
 }
 
 .show {
-	animation: fadeIn ease 2s;
+	animation: fadeIn ease 1s;
 	animation-fill-mode: forwards;
-	-webkit-animation: fadeIn ease 2s;
+	-webkit-animation: fadeIn ease 1s;
 	-webkit-animation-fill-mode: forwards;
-	-moz-animation: fadeIn ease 2s;
+	-moz-animation: fadeIn ease 1s;
 	-moz-animation-fill-mode: forwards;
-	-o-animation: fadeIn ease 2s;
+	-o-animation: fadeIn ease 1s;
 	-o-animation-fill-mode: forwards;
-	-ms-animation: fadeIn ease 2s;
+	-ms-animation: fadeIn ease 1s;
+	-ms-animation-fill-mode: forwards;
+}
+
+.hide {
+	animation: fadeOut ease 0.5s;
+	animation-fill-mode: forwards;
+	-webkit-animation: fadeOut ease 0.5s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation: fadeOut ease 0.5s;
+	-moz-animation-fill-mode: forwards;
+	-o-animation: fadeOut ease 0.5s;
+	-o-animation-fill-mode: forwards;
+	-ms-animation: fadeOut ease 0.5s;
 	-ms-animation-fill-mode: forwards;
 }
 @keyframes fadeIn {
@@ -260,5 +274,50 @@ body {
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-moz-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-o-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-ms-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
 	}
 }
