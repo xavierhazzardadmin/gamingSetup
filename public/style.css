@@ -32,6 +32,16 @@ body {
 	display: block;
 	width: 24rem;
 	height: 11rem;
+    animation: fadeIn ease 1s;
+	animation-fill-mode: forwards;
+	-webkit-animation: fadeIn ease 1s;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation: fadeIn ease 1s;
+	-moz-animation-fill-mode: forwards;
+	-o-animation: fadeIn ease 1s;
+	-o-animation-fill-mode: forwards;
+	-ms-animation: fadeIn ease 1s;
+	-ms-animation-fill-mode: forwards;
 }
 
 .formInput {
