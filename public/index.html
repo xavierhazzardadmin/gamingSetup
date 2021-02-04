@@ -17,13 +17,13 @@
 		></script>
 	</head>
 	<body>
-		<form method="post" action="/">
+		<!-- <form method="post" action="/">
 			<input type="color" name="color" id="colorPicker" />
 			<button id="submit">Save</button>
-		</form>
+		</form> -->
 
 		<div class="form">
-			<form>
+			<form autocomplete="off">
 				<input
 					type="text"
 					name="Item"
@@ -50,14 +50,11 @@
 			</form>
 			<button id="addItem">Add</button>
 		</div>
-		<!-- 
-		<div class="item bgColor">
-			<p class="top">Name: <span class="value">Mon</span></p>
-			<p class="middle">Price: <span class="value">24</span></p>
-			<p class="bottom">Savings: <span class="value">476</span></p>
-			<button class="saveBtn"><i class="fas fa-trash-alt"></i></button>
-		</div> -->
 
+		<div class="items"></div>
+		<div class="total">
+			<p id="textShow">Total: <span id="total"></span></p>
+		</div>
 		<script src="./app.js"></script>
 	</body>
 </html>
