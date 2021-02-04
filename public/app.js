@@ -103,18 +103,18 @@ function createItem(name, price, budget, link, img) {
 	div.appendChild(linkTag);
 	body.appendChild(div);
 	div.classList.add("show");
-	total += Number(price);
-	savings -= Number(price);
-	totalView.innerHTML = total;
+	total = total + parseFloat(price);
+	savings -= parseFloat(price);
+	totalView.innerHTML = `${total}`;
 	del.addEventListener("click", function () {
 		setTimeout(() => {
 			this.parentElement.classList.add("hide");
 			sleep(500).then(() => {
 				this.parentElement.remove();
 			});
-			savings += Number(price);
-			total -= Number(price);
-			totalView.innerHTML = total;
+			savings += parseFloat(price);
+			total -= parseFloat(price);
+			totalView.innerHTML = `${total}`;
 			if (total == 0) {
 				textShow.classList.remove("show");
 				textShow.classList.add("hide");
