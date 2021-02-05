@@ -1,7 +1,7 @@
 {
-	"name": "setuptest",
+	"name": "gaming-setup",
 	"version": "1.0.0",
-	"description": "A basic web app",
+	"description": "A web app to keep track of your gaming setup ideas",
 	"main": "index.js",
 	"scripts": {
 		"test": "\"start\": \"node index.js\""

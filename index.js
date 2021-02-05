@@ -8,7 +8,7 @@ const options = {};
 //middleware
 app.use(express.static("public", options));
 app.use(bodyparser.urlencoded({ extended: true }));
-app.listen(PORT);
+app.listen(PORT, console.log(`Server started on ${PORT}`));
 
 const index = `${__dirname}/public/index.html`;
 
