@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/mnt/c/Users/brand/Desktop/gamingSetupDjango/venv"
+set -gx VIRTUAL_ENV "/home/skyward/projects/gamingSetupDjango/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
