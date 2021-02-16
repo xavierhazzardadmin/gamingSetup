@@ -8,9 +8,19 @@
     </head>
     <body>
         <div style = "max-width:470px;">
-            {{ form.as_p }}
-            {% csrf_token %}
-            <input type="submit" class="btnbtn-primary" value="submit">
+            <form method="post" action="">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" class="btnbtn-primary" value="submit">
+            </form>
+            {% for part in parts%}
+                <div>
+                    <a href = " {{part.link }}"> {{part.item}}</a>
+                    <p> {{ part.price }}</p>
+                    <img src="{{ part.img_link }}">
+                </div>
+            </article>
+            {% endfor %}
         </div>
     </body>
 </html>
