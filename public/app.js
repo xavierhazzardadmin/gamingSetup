@@ -124,4 +124,4 @@ function createItem(name, price, budget, link, img) {
 	textShow.classList.add("show");
 }
 
-// createItem("1440p Monitor", 400, 0);
+createItem("1440p Monitor", 400, "amazon.com", "google.com");
