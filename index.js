@@ -40,7 +40,7 @@ app.post("/additem", (req, res) => {
         itemLink,
         imgLink,
     } = req.body;
-    total += parseInt(Price, 10);
+    total += parseFloat(Price, 10);
     const newItem = {
         name: Item,
         cost: Price,
@@ -48,11 +48,19 @@ app.post("/additem", (req, res) => {
         imgLink,
         amountLeft:
             budget -
-            parseInt(Price, 10),
+            parseFloat(Price, 10),
     };
 
-    budget -= parseInt(Price, 10);
+    budget -= parseFloat(Price, 10);
 
     items.push(newItem);
+    res.redirect("/");
+});
+
+app.post("/delete", (req, res) => {
+    const { index } = req.body;
+    const i = parseInt(index, 10);
+
+    items.splice(i, 1);
     res.redirect("/");
 });

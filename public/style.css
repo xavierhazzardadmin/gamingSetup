@@ -1,343 +1,375 @@
 * {
-	--main-font: sans-serif;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    --main-font: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 button {
-	font-family: var(--main-font);
+    font-family: var(--main-font);
 }
 
 button:focus {
-	outline: none;
+    outline: none;
 }
 
 body {
-	position: relative;
-	/* background: linear-gradient(to bottom right, rgb(127, 242, 250), #fff);
+    position: relative;
+    /* background: linear-gradient(to bottom right, rgb(127, 242, 250), #fff);
 	 */
-	background: linear-gradient(to bottom right, skyblue, white);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
+    background: linear-gradient(
+        to bottom right,
+        skyblue,
+        white
+    );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .form {
-	margin: 2rem auto;
-	display: block;
-	width: 24rem;
-	height: 11rem;
-	animation: fadeIn ease 1s;
-	animation-fill-mode: forwards;
-	-webkit-animation: fadeIn ease 1s;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation: fadeIn ease 1s;
-	-moz-animation-fill-mode: forwards;
-	-o-animation: fadeIn ease 1s;
-	-o-animation-fill-mode: forwards;
-	-ms-animation: fadeIn ease 1s;
-	-ms-animation-fill-mode: forwards;
+    margin: 2rem auto;
+    display: block;
+    width: 24rem;
+    height: 11rem;
+    animation: fadeIn ease 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadeIn ease 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation: fadeIn ease 1s;
+    -moz-animation-fill-mode: forwards;
+    -o-animation: fadeIn ease 1s;
+    -o-animation-fill-mode: forwards;
+    -ms-animation: fadeIn ease 1s;
+    -ms-animation-fill-mode: forwards;
 }
 
 .formInput {
-	display: block;
-	/* margin: 0 auto; */
-	width: 24rem;
-	height: 2.55rem;
-	border-radius: 0;
-	/* border: 0.1px solid rgb(127, 242, 250);; */
-	border: none;
-	padding: 0.625rem;
-	border-left: 0.1px solid rgb(127, 242, 250);
-	border-right: 0.1px solid rgb(127, 242, 250);
+    display: block;
+    /* margin: 0 auto; */
+    width: 24rem;
+    height: 2.55rem;
+    border-radius: 0;
+    /* border: 0.1px solid rgb(127, 242, 250);; */
+    border: none;
+    padding: 0.625rem;
+    border-left: 0.1px solid
+        rgb(127, 242, 250);
+    border-right: 0.1px solid
+        rgb(127, 242, 250);
 }
 
 .formInput:first-child {
-	border-top: 0.1px solid rgb(127, 242, 250);
+    border-top: 0.1px solid
+        rgb(127, 242, 250);
 }
 .formInput:first-child:hover {
-	border-top: 0.1px solid rgb(127, 242, 250);
+    border-top: 0.1px solid
+        rgb(127, 242, 250);
 }
 
 .formInput:last-child {
-	border-bottom: 0.1px solid rgb(127, 242, 250);
+    border-bottom: 0.1px solid
+        rgb(127, 242, 250);
 }
 .formInput:last-child:hover {
-	border-bottom: 0.1px solid rgb(127, 242, 250);
+    border-bottom: 0.1px solid
+        rgb(127, 242, 250);
 }
 
 .formInput:hover {
-	outline: none;
-	/* border: 1px solid grey; */
-	border: none;
-	border-left: 0.1px solid rgb(127, 242, 250);
-	border-right: 0.1px solid rgb(127, 242, 250);
+    outline: none;
+    /* border: 1px solid grey; */
+    border: none;
+    border-left: 0.1px solid
+        rgb(127, 242, 250);
+    border-right: 0.1px solid
+        rgb(127, 242, 250);
 }
 .formInput:focus {
-	outline: none;
-	/* border: 0.1px solid rgb(127, 242, 250);; */
-	border-left: 0.1px solid rgb(127, 242, 250);
-	border-right: 0.1px solid rgb(127, 242, 250);
-	/* border: none; */
+    outline: none;
+    /* border: 0.1px solid rgb(127, 242, 250);; */
+    border-left: 0.1px solid
+        rgb(127, 242, 250);
+    border-right: 0.1px solid
+        rgb(127, 242, 250);
+    /* border: none; */
 }
 
 #addItem {
-	position: relative;
-	width: 24rem;
-	height: 2rem;
-	border: none;
-	background: skyblue;
-	display: block;
-	margin: 0 auto;
-	transition: background 0.5s ease;
+    position: relative;
+    width: 24rem;
+    height: 2rem;
+    border: none;
+    background: skyblue;
+    display: block;
+    margin: 0 auto;
+    transition: background 0.5s ease;
 }
 
 .btn {
-	position: relative;
-	width: 24rem;
-	height: 2rem;
-	border: none;
-	background: skyblue;
-	display: block;
-	margin: 0 auto;
-	transition: background 0.5s ease;
+    position: relative;
+    width: 24rem;
+    height: 2rem;
+    border: none;
+    background: skyblue;
+    display: block;
+    margin: 0 auto;
+    transition: background 0.5s ease;
 }
 
 #addItem:hover {
-	background: rgb(77, 175, 255);
+    background: rgb(77, 175, 255);
 }
 
 .value {
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .items {
-	/* text-align: center; */
-	width: 100%;
-	height: 100%;
+    /* text-align: center; */
+    width: 100%;
+    height: 100%;
 }
 
 .item {
-	display: block;
-	position: relative;
-	margin: 0 auto 1rem;
-	width: 24rem;
-	height: 7rem;
-	background-color: rgba(255, 255, 255, 0.7);
-	opacity: 0;
+    display: block;
+    position: relative;
+    margin: 0 auto 1rem;
+    width: 24rem;
+    height: 7rem;
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.7
+    );
+    opacity: 0;
 }
 
 .pic {
-	display: block;
-	position: relative;
-	width: 24rem;
-	height: 22rem;
-	margin: 0 auto 1rem;
-	background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    position: relative;
+    width: 24rem;
+    height: 22rem;
+    margin: 0 auto 1rem;
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.7
+    );
 }
 
 .pic .top {
-	position: relative;
-	top: 2%;
-	transform: translateY(-2%);
-	left: 5%;
-	font-family: var(--main-font);
+    position: relative;
+    top: 2%;
+    transform: translateY(-2%);
+    left: 5%;
+    font-family: var(--main-font);
 }
 
 .pic .middle {
-	position: relative;
-	top: 10%;
-	transform: translateY(-10%);
-	left: 5%;
-	font-family: var(--main-font);
+    position: relative;
+    top: 10%;
+    transform: translateY(-10%);
+    left: 5%;
+    font-family: var(--main-font);
 }
 
 .pic .bottom {
-	position: relative;
-	top: 17%;
-	left: 5%;
-	font-family: var(--main-font);
+    position: relative;
+    top: 17%;
+    left: 5%;
+    font-family: var(--main-font);
 }
 
 .img {
-	display: block;
-	position: relative;
-	width: 24rem;
-	height: 13.5rem;
-	margin: 0 auto 0.5rem;
+    display: block;
+    position: relative;
+    width: 24rem;
+    height: 13.5rem;
+    margin: 0 auto 0.5rem;
 }
 
 .faBtn {
-	display: block;
-	width: 2rem;
-	height: 2rem;
-	background: none;
-	font-size: 1rem;
-	font-family: var(--main-font);
-	border: none;
-	border-radius: 12px;
-	position: relative;
-	left: 87%;
-	transform: translateY(-45%);
-	transition: background 0.2s ease;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background: none;
+    font-size: 1rem;
+    font-family: var(--main-font);
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    left: 87%;
+    transform: translateY(-45%);
+    transition: background 0.2s ease;
 }
 
 .faBtn:hover {
-	background: rgba(255, 255, 255, 0.7);
+    background: rgba(
+        255,
+        255,
+        255,
+        0.7
+    );
 }
 
 .top {
-	position: relative;
-	top: 10%;
-	left: 5%;
-	font-family: var(--main-font);
+    position: relative;
+    top: 10%;
+    left: 5%;
+    font-family: var(--main-font);
 }
 
 .middle {
-	position: relative;
-	top: 30%;
-	transform: translateY(-30%);
-	left: 5%;
-	font-family: var(--main-font);
+    position: relative;
+    top: 30%;
+    transform: translateY(-30%);
+    left: 5%;
+    font-family: var(--main-font);
 }
 
 .bottom {
-	position: relative;
-	top: 42%;
-	left: 5%;
-	font-family: var(--main-font);
+    position: relative;
+    top: 42%;
+    left: 5%;
+    font-family: var(--main-font);
 }
 
 .total {
-	position: fixed;
-	bottom: 0%;
-	left: 50%;
-	font-family: var(--main-font);
-	font-weight: bold;
-	text-align: center;
-	width: 24rem;
-	height: 2rem;
-	transform: translateX(-50%);
-	/* opacity: 0; */
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    font-family: var(--main-font);
+    font-weight: bold;
+    text-align: center;
+    width: 24rem;
+    height: 2rem;
+    transform: translateX(-50%);
+    /* opacity: 0; */
 }
 
-
 .show {
-	animation: fadeIn ease 1s;
-	animation-fill-mode: forwards;
-	-webkit-animation: fadeIn ease 1s;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation: fadeIn ease 1s;
-	-moz-animation-fill-mode: forwards;
-	-o-animation: fadeIn ease 1s;
-	-o-animation-fill-mode: forwards;
-	-ms-animation: fadeIn ease 1s;
-	-ms-animation-fill-mode: forwards;
+    animation: fadeIn ease 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadeIn ease 1s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation: fadeIn ease 1s;
+    -moz-animation-fill-mode: forwards;
+    -o-animation: fadeIn ease 1s;
+    -o-animation-fill-mode: forwards;
+    -ms-animation: fadeIn ease 1s;
+    -ms-animation-fill-mode: forwards;
 }
 
 .hide {
-	animation: fadeOut ease 0.5s;
-	animation-fill-mode: forwards;
-	-webkit-animation: fadeOut ease 0.5s;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation: fadeOut ease 0.5s;
-	-moz-animation-fill-mode: forwards;
-	-o-animation: fadeOut ease 0.5s;
-	-o-animation-fill-mode: forwards;
-	-ms-animation: fadeOut ease 0.5s;
-	-ms-animation-fill-mode: forwards;
+    animation: fadeOut ease 0.5s;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadeOut ease 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation: fadeOut ease 0.5s;
+    -moz-animation-fill-mode: forwards;
+    -o-animation: fadeOut ease 0.5s;
+    -o-animation-fill-mode: forwards;
+    -ms-animation: fadeOut ease 0.5s;
+    -ms-animation-fill-mode: forwards;
 }
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-moz-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-o-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @-ms-keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-moz-keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-webkit-keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-o-keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @-ms-keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hiddenInput {
+    visibility: hidden;
 }

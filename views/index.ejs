@@ -1,105 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Gaming Setup</title>
-		<link rel="stylesheet" href="./style.css" />
-		<link rel="stylesheet" href="./color.css" />
-		<link
-			rel="shortcut icon"
-			href="./img/favicon.ico"
-			type="image/x-icon"
-		/>
-		<script
-			src="https://kit.fontawesome.com/c7a6f77d43.js"
-			crossorigin="anonymous"
-		></script>
-	</head>
-	<body>
-		<div class="form">
-			<form autocomplete="off" action="/additem" method="post">
-				<input
-					type="text"
-					name="Item"
-					placeholder="Please enter item name"
-					class="formInput"
-					id="itemName"
-					required
-				/>
-				<input
-					type="number"
-					name="Price"
-					placeholder="Please enter item price"
-					class="formInput"
-					id="itemPrice"
-					required
-				/>
-				<input
-					type="url"
-					name="itemLink"
-					placeholder="Item link"
-					class="formInput"
-					id="itemLink"
-					required
-				/>
-				<input
-					type="text"
-					name="imgLink"
-					placeholder="Pic URL (optional)"
-					class="formInput"
-					id="itemImg"
-				/>
-				<button id="addItem" type="submit">Add</button>
-			</form>
-		</div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Gaming Setup</title>
+        <link
+            rel="stylesheet"
+            href="./style.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./color.css"
+        />
+        <link
+            rel="shortcut icon"
+            href="./img/favicon.ico"
+            type="image/x-icon"
+        />
+        <script
+            src="https://kit.fontawesome.com/c7a6f77d43.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div class="form">
+            <form
+                autocomplete="off"
+                action="/additem"
+                method="post"
+            >
+                <input
+                    type="text"
+                    name="Item"
+                    placeholder="Please enter item name"
+                    class="formInput"
+                    id="itemName"
+                    required
+                />
+                <input
+                    type="text"
+                    name="Price"
+                    placeholder="Please enter item price"
+                    class="formInput"
+                    id="itemPrice"
+                    required
+                />
+                <input
+                    type="url"
+                    name="itemLink"
+                    placeholder="Item link"
+                    class="formInput"
+                    id="itemLink"
+                    required
+                />
+                <input
+                    type="text"
+                    name="imgLink"
+                    placeholder="Pic URL (optional)"
+                    class="formInput"
+                    id="itemImg"
+                />
+                <button
+                    id="addItem"
+                    type="submit"
+                >
+                    Add
+                </button>
+            </form>
+        </div>
 
-		<% for(let i of items) { %> <% if(!i.imgLink){ %>
+        <% for(let i of items) { %> <%
+        if(!i.imgLink){ %>
 
-		<div class="items">
-			<div class="item show">
-				<p class="top">
-					Name: <span class="value"><%= i.name %> </span>
-				</p>
-				<p class="middle">
-					Price: <span class="value">£<%= i.cost %></span>
-				</p>
-				<p class="bottom">
-					Amount left: <span class="value">£<%= i.amountLeft %></span>
-				</p>
-				<button class="faBtn">
-					<i class="fas fa-trash-alt" aria-hidden="true"></i></button
-				><a target="_blank" href="<%=i.link%>"
-					><button class="faBtn">
-						<i class="fas fa-link" aria-hidden="true"></i></button
-				></a>
-			</div>
-		</div>
-		<% } else { %>
-		<div class="items">
-			<div class="pic show">
-				<img src="<%=i.imgLink%>" class="img" />
-				<p class="top">
-					Name: <span class="value"><%= i.name %> </span>
-				</p>
-				<p class="middle">
-					Price: <span class="value">£<%= i.cost %></span>
-				</p>
-				<p class="bottom">
-					Amount left: <span class="value">£<%= i.amountLeft %></span>
-				</p>
-				<button class="faBtn">
-					<i class="fas fa-trash-alt" aria-hidden="true"></i></button
-				><a target="_blank" href="<%=i.link%>"
-					><button class="faBtn">
-						<i class="fas fa-link" aria-hidden="true"></i></button
-				></a>
-			</div>
-		</div>
-		<% } %> <% } %>
-		<div class="total">
-			<p id="textShow">Total: £<%= total %></p>
-		</div>
-		<script src="./app.js"></script>
-	</body>
+        <div class="items">
+            <div class="item show">
+                <p class="top">
+                    Name:
+                    <span class="value"
+                        ><%= i.name %>
+                    </span>
+                </p>
+                <p class="middle">
+                    Price:
+                    <span class="value"
+                        >£<%= i.cost
+                        %></span
+                    >
+                </p>
+                <p class="bottom">
+                    Amount left:
+                    <span class="value"
+                        >£<%=
+                        i.amountLeft
+                        %></span
+                    >
+                </p>
+                <button class="faBtn">
+                    <i
+                        class="fas fa-trash-alt"
+                        aria-hidden="true"
+                    ></i></button
+                ><a
+                    target="_blank"
+                    href="<%=i.link%>"
+                    ><button
+                        class="faBtn"
+                    >
+                        <i
+                            class="fas fa-link"
+                            aria-hidden="true"
+                        ></i></button
+                ></a>
+            </div>
+        </div>
+        <% } else { %>
+        <div class="items">
+            <div class="pic show">
+                <img
+                    src="<%=i.imgLink%>"
+                    class="img"
+                />
+                <p class="top">
+                    Name:
+                    <span class="value"
+                        ><%= i.name %>
+                    </span>
+                </p>
+                <p class="middle">
+                    Price:
+                    <span class="value"
+                        >£<%= i.cost
+                        %></span
+                    >
+                </p>
+                <p class="bottom">
+                    Amount left:
+                    <span class="value"
+                        >£<%=
+                        i.amountLeft
+                        %></span
+                    >
+                </p>
+                <form
+                    action="/delete"
+                    method="post"
+                >
+                    <button
+                        class="faBtn"
+                    >
+                        <i
+                            class="fas fa-trash-alt"
+                            aria-hidden="true"
+                        ></i>
+                    </button>
+                </form>
+                <input
+                    type="text"
+                    value="<%= i %>"
+                    class="hiddenInput"
+                    name="index"
+                />
+                <a
+                    target="_blank"
+                    href="<%=i.link%>"
+                    ><button
+                        class="faBtn"
+                    >
+                        <i
+                            class="fas fa-link"
+                            aria-hidden="true"
+                        ></i></button
+                ></a>
+            </div>
+        </div>
+        <% } %> <% } %>
+        <div class="total">
+            <p id="textShow">
+                Total: £<%= total %>
+            </p>
+        </div>
+        <script src="./app.js"></script>
+    </body>
 </html>
