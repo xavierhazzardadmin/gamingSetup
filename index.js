@@ -1,3 +1,4 @@
+TabNine::sem
 const express = require("express");
 const bodyparser = require("body-parser");
 
@@ -55,7 +56,7 @@ app.post("/additem", (req, res) => {
 
     items.push(newItem);
     res.redirect("/");
-});
+);
 
 app.post("/delete", (req, res) => {
     const { index } = req.body;
