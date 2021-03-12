@@ -1,4 +1,4 @@
-TabNine::sem
+//  TabNine::sem
 const express = require("express");
 const bodyparser = require("body-parser");
 
@@ -7,6 +7,7 @@ const PORT = process.env.PORT || 5005;
 
 const options = {};
 const items = [];
+
 let budget = 5000;
 let total = 0;
 //    middleware
@@ -56,7 +57,7 @@ app.post("/additem", (req, res) => {
 
     items.push(newItem);
     res.redirect("/");
-);
+});
 
 app.post("/delete", (req, res) => {
     const { index } = req.body;
