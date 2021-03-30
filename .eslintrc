@@ -17,7 +17,7 @@
             "error",
             "after"
         ],
-        "no-unused-vars": ["error", {"args": "after-used"}]
+        "no-unused-vars": ["error", {"args": "after-used"}],
         "linebreak-style": [
             "error",
             "unix"
