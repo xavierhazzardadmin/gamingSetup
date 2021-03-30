@@ -1,6 +1,5 @@
 //  TabNine::sem
-const express = require("express");
-const bodyparser = require("body-parser");
+import express from "express";
 
 const app = express();
 const PORT = process.env.PORT || 5005;
@@ -16,7 +15,7 @@ app.use(
     express.static("public", options)
 );
 app.use(
-    bodyparser.urlencoded({
+    express.urlencoded({
         extended: true,
     })
 );
