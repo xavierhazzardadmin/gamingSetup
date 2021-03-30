@@ -14,12 +14,15 @@ let total = 0;
 app.use(
     express.static("public", options)
 );
+
 app.use(
     express.urlencoded({
         extended: true,
     })
 );
+
 app.set("view engine", "ejs");
+
 app.listen(
     PORT,
     console.log(
