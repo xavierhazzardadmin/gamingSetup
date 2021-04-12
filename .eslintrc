@@ -20,7 +20,7 @@
         "no-unused-vars": ["error", {"args": "after-used"}],
         "linebreak-style": [
             "error",
-            "windows"
+            "unix"
         ],
         "comma-dangle": [
             "error",
