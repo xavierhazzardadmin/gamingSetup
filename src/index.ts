@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 5005;
 
 const options = {};
-const items = [];
+let items: object[];
 
 let budget = 5000;
 let total = 0;
@@ -13,6 +13,7 @@ let total = 0;
 app.use(
     express.static("public", options)
 );
+
 app.use(
     express.urlencoded({
         extended: true,
@@ -37,18 +38,17 @@ app.post("/additem", (req, res) => {
         itemLink,
         imgLink,
     } = req.body;
-    total += parseFloat(Price, 10);
+    total += parseFloat(Price);
     const newItem = {
         name: Item,
         cost: Price,
         link: itemLink,
         imgLink,
         amountLeft:
-            budget -
-            parseFloat(Price, 10),
+            budget - parseFloat(Price),
     };
 
-    budget -= parseFloat(Price, 10);
+    budget -= parseFloat(Price);
 
     items.push(newItem);
     res.redirect("/");
