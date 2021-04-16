@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-const PORT = process.env.PORT || 5005;
+const PORT: number = 5005;
 
 interface listItem {
     name: string;
@@ -11,16 +11,13 @@ interface listItem {
     amountLeft: number;
 }
 
-const options = {};
 const items: listItem[] = [];
 
-let budget = 5000;
-let total = 0;
+let budget: number = 5000;
+let total: number = 0;
 //    middleware
 
-app.use(
-    express.static("public", options)
-);
+app.use(express.static("public"));
 
 app.use(
     express.urlencoded({
