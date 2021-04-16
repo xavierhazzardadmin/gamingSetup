@@ -7,7 +7,7 @@ const express_1 = __importDefault(require("express"));
 const app = express_1.default();
 const PORT = process.env.PORT || 5005;
 const options = {};
-let items;
+const items = [];
 let budget = 5000;
 let total = 0;
 //    middleware
@@ -25,22 +25,23 @@ app.get("/", (req, res) => {
 });
 app.post("/additem", (req, res) => {
     const { Item, Price, itemLink, imgLink, } = req.body;
-    total += parseFloat(Price, 10);
+    total += parseFloat(Price);
     const newItem = {
         name: Item,
         cost: Price,
         link: itemLink,
         imgLink,
-        amountLeft: budget -
-            parseFloat(Price, 10),
+        amountLeft: budget - parseFloat(Price),
     };
-    budget -= parseFloat(Price, 10);
+    budget -= parseFloat(Price);
     items.push(newItem);
     res.redirect("/");
 });
 app.post("/delete", (req, res) => {
     const { index } = req.body;
     const i = parseInt(index, 10);
+    total -= items[i].cost;
+    console.log(total);
     items.splice(i, 1);
     res.redirect("/");
 });

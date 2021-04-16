@@ -3,8 +3,16 @@ import express from "express";
 const app = express();
 const PORT = process.env.PORT || 5005;
 
+interface listItem {
+    name: string;
+    cost: number;
+    link: string;
+    imgLink?: string;
+    amountLeft: number;
+}
+
 const options = {};
-let items: object[];
+const items: listItem[] = [];
 
 let budget = 5000;
 let total = 0;
@@ -19,7 +27,9 @@ app.use(
         extended: true,
     })
 );
+
 app.set("view engine", "ejs");
+
 app.listen(PORT, () => console.log(
     `Server started on ${PORT}`
 ));
@@ -39,7 +49,7 @@ app.post("/additem", (req, res) => {
         imgLink,
     } = req.body;
     total += parseFloat(Price);
-    const newItem = {
+    const newItem: listItem = {
         name: Item,
         cost: Price,
         link: itemLink,
@@ -56,7 +66,13 @@ app.post("/additem", (req, res) => {
 
 app.post("/delete", (req, res) => {
     const { index } = req.body;
-    const i = parseInt(index, 10);
+    const i: number = parseInt(
+        index,
+        10
+    );
+
+    total -= items[i].cost;
+    console.log(total);
 
     items.splice(i, 1);
     res.redirect("/");
