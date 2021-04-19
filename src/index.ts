@@ -1,7 +1,7 @@
 import express from "express";
 
 const app = express();
-const PORT: number = 5005;
+const PORT: number = 3000;
 
 interface listItem {
     name: string;
