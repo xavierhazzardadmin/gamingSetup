@@ -28,10 +28,14 @@ function addItem(
     picUrl: string
 ) {
     // @ts-ignore
-    const doc = new Item(
+    const doc = new Item({
         name,
         price,
         url,
-        picUrl
-    );
+        picUrl,
+    });
+    // save then re-render the page
+    doc.save().then(() => {
+        res.render();
+    });
 }
