@@ -77,9 +77,11 @@ app.use(
 
 app.set("view engine", "ejs");
 
-app.listen(PORT, () => console.log(
-    `Server started on ${PORT}`
-));
+app.listen(PORT, () =>
+    console.log(
+        `Server started on ${PORT}`
+    )
+);
 
 app.get("/", (req, res) => {
     /**

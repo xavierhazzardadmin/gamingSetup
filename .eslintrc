@@ -4,16 +4,19 @@
         "commonjs": true,
         "es2021": true
     },
-    "extends": ["airbnb-base"],
+    "extends": ["airbnb-base", "plugin:prettier/recommended"],
     "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint"],
     "parserOptions": {
         "ecmaVersion": 12,
     },
     "rules": {
+        "import/no-unresolved": "off",
         "semi": ["error", "always"],
         "quotes": ["error", "double"],
         "no-console": "off",
-        "indent": ["error", 4],
+        "indent": "off",
+        "@typescript-eslint/indent": ["error", 4],
         "operator-linebreak": [
             "error",
             "after"
@@ -32,7 +35,6 @@
                 "exports": "never",
                 "functions": "never"
             }
-        ],
-
+        ]
     }
 }
